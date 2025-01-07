@@ -20,14 +20,13 @@ const Home = () => {
 
   return (
     <div className="bg-black text-white min-h-screen relative overflow-hidden">
-      {/* Hero Section with Video */}
       <section className="relative h-screen">
         <video
           autoPlay
           loop
           muted
           className="absolute inset-0 w-full h-full object-cover"
-          src="/src/assets/video.mp4"
+          src="/assets/video.mp4"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <Navbar />
@@ -84,7 +83,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <motion.img
-                src="/src/assets/tech.jpg" // Replace with actual image URL
+                src="/assets/tech.jpg" 
                 alt="Porsche Technology"
                 className="w-full h-auto rounded-lg shadow-lg"
                 initial={{ scale: 0.8, opacity: 0 }}

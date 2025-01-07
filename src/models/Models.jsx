@@ -3,15 +3,13 @@ import { motion } from 'framer-motion';
 import Navbar from '../components/navbar/Navbar';
 import Footer from '../components/footer/Footer';
 
-// Importing carousel slider
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-// Import images for each model
-import porsche718Image from '/src/assets/718.jpeg';
-import porsche911Image from '/src/assets/911.jpg';
-import porscheTaycanImage from '/src/assets/taycan.webp';
-import porschePanameraImage from '/src/assets/panmera.webp';
+import porsche718Image from '/assets/718.jpeg';
+import porsche911Image from '/assets/911.jpg';
+import porscheTaycanImage from '/assets/taycan.webp';
+import porschePanameraImage from '/assets/panmera.webp';
 
 const porscheModels = [
   {

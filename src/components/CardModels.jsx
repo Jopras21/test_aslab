@@ -3,34 +3,34 @@ import { motion } from 'framer-motion';
 import Card from './Card'; 
 
 // Import gambar
-import porsche718Image from '/src/assets/718.jpeg';
-import porsche911Image from '/src/assets/911.jpg';
-import porscheTaycanImage from '/src/assets/taycan.webp';
-import porschePanameraImage from '/src/assets/panmera.webp';
+import porsche718Image from '/assets/718.jpeg';
+import porsche911Image from '/assets/911.jpg';
+import porscheTaycanImage from '/assets/taycan.webp';
+import porschePanameraImage from '/assets/panmera.webp';
 
 const porscheModels = [
   {
     title: 'Porsche 718',
     description: 'A mid-engine sports car, built for thrill and precision.',
-    image: porsche718Image,  // Gunakan variabel yang diimport
+    image: porsche718Image,  
     link: '/models/718', 
   },
   {
     title: 'Porsche 911',
     description: 'Iconic rear-engine performance that defines a generation.',
-    image: porsche911Image,  // Gunakan variabel yang diimport
+    image: porsche911Image,  
     link: '/models/911',
   },
   {
     title: 'Porsche Taycan',
     description: 'The future of electric driving with high-performance features.',
-    image: porscheTaycanImage,  // Gunakan variabel yang diimport
+    image: porscheTaycanImage,  
     link: '/models/taycan',
   },
   {
     title: 'Porsche Panamera',
     description: 'A luxury sports sedan blending power and elegance.',
-    image: porschePanameraImage,  // Gunakan variabel yang diimport
+    image: porschePanameraImage,  
     link: '/models/panamera',
   },
 ];

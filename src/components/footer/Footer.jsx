@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center mb-6 md:mb-0">
             <img 
-              src="/src/assets/logo.png" // Replace with the Porsche logo path
+              src="/assets/logo.png" // Replace with the Porsche logo path
               alt="Porsche Logo" 
               className="w-24 h-auto"
             />
@@ -32,28 +32,28 @@ const Footer = () => {
           <div className="flex space-x-6 mb-6 md:mb-0">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
               <img 
-                src="/src/assets/facebook.webp" 
+                src="/assets/facebook.webp" 
                 alt="Facebook" 
                 className="w-6 h-6 hover:opacity-80 transition"
               />
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
               <img 
-                src="/src/assets/twitter.webp"
+                src="/assets/twitter.webp"
                 alt="Twitter" 
                 className="w-6 h-6 hover:opacity-80 transition"
               />
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
               <img 
-                src="/src/assets/instagram.png"
+                src="/assets/instagram.png"
                 alt="Instagram" 
                 className="w-6 h-6 hover:opacity-80 transition"
               />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
               <img 
-                src="/src/assets/linkedin.webp"
+                src="/assets/linkedin.webp"
                 alt="LinkedIn" 
                 className="w-6 h-6 hover:opacity-80 transition"
               />

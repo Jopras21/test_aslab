@@ -12,7 +12,7 @@ const About = () => {
         {/* Header Section */}
         <header className="relative h-[50vh] flex items-center justify-center overflow-hidden">
           <motion.img
-            src="/path-to-about-hero.jpg" 
+            src="/assets/banner.jpg" 
             alt="Porsche Design"
             className="absolute inset-0 w-full h-full object-cover opacity-70"
             initial={{ opacity: 0, scale: 1.2 }}
@@ -56,7 +56,7 @@ const About = () => {
             transition={{ duration: 1, delay: 0.3 }}
           >
             <img
-              src="/src/assets/porsche.jpeg" 
+              src="/assets/porsche.jpeg" 
               alt="Mission"
               className="w-full md:w-1/2 h-auto rounded-lg shadow-lg"
             />

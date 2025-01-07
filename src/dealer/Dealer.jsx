@@ -13,7 +13,7 @@ const Dealer = () => {
           loop
           muted
           className="absolute inset-0 w-full h-full object-cover"
-          src="/src/assets/video.mp4"
+          src="/assets/video.mp4"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <Navbar />
