@@ -17,10 +17,11 @@ const Footer = () => {
 
           {/* Navigation Links */}
           <nav className="flex space-x-6">
+          <a href="/home" className="text-gray-400 hover:text-white transition">Home</a>
             <a href="/about" className="text-gray-400 hover:text-white transition">About Us</a>
             <a href="/models" className="text-gray-400 hover:text-white transition">Models</a>
             <a href="/services" className="text-gray-400 hover:text-white transition">Services</a>
-            <a href="/contact" className="text-gray-400 hover:text-white transition">Contact</a>
+            <a href="/Feedback" className="text-gray-400 hover:text-white transition">Feedback</a>
           </nav>
         </div>
 
@@ -31,28 +32,28 @@ const Footer = () => {
           <div className="flex space-x-6 mb-6 md:mb-0">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
               <img 
-                src="/path-to-facebook-icon.svg" // Replace with social media icon paths
+                src="/src/assets/facebook.webp" 
                 alt="Facebook" 
                 className="w-6 h-6 hover:opacity-80 transition"
               />
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
               <img 
-                src="/path-to-twitter-icon.svg"
+                src="/src/assets/twitter.webp"
                 alt="Twitter" 
                 className="w-6 h-6 hover:opacity-80 transition"
               />
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
               <img 
-                src="/path-to-instagram-icon.svg"
+                src="/src/assets/instagram.png"
                 alt="Instagram" 
                 className="w-6 h-6 hover:opacity-80 transition"
               />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
               <img 
-                src="/path-to-linkedin-icon.svg"
+                src="/src/assets/linkedin.webp"
                 alt="LinkedIn" 
                 className="w-6 h-6 hover:opacity-80 transition"
               />

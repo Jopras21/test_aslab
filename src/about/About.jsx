@@ -56,7 +56,7 @@ const About = () => {
             transition={{ duration: 1, delay: 0.3 }}
           >
             <img
-              src="/path-to-mission-image.jpg" // Replace with actual image
+              src="/src/assets/porsche.jpeg" // Replace with actual image
               alt="Mission"
               className="w-full md:w-1/2 h-auto rounded-lg shadow-lg"
             />

@@ -5,7 +5,7 @@ import './index.css'
 import Home from './home/Home';
 import About from "./about/About";
 import FeedBack from "./feedback/Feedback";
-import Dealer
+import Dealer from "./dealer/Dealer";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 

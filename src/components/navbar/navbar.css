@@ -47,3 +47,20 @@
     filter: drop-shadow(8px 9px 18px #ffffff);
     cursor: pointer;
   }
+
+  /* Text Shadow Glow Effect */
+.text-shadow-glow {
+  text-shadow: 0 0 8px #d61f1f, 0 0 16px #d61f1f, 0 0 24px #d61f1f;
+}
+
+/* Animasi pada Navbar */
+#nav.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#nav {
+  opacity: 0;
+  transform: translateY(-20px);
+}
