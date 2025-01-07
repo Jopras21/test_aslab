@@ -1,18 +1,18 @@
-import React, { useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
-import logo from "../assets/logo.png";
-import Time from "./time.jsx";
-import "./navbar.css";
+import React, { useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
+import logo from '/src/assets/logo.png'
+import Time from './time.jsx';
+import './navbar.css';
 
 const Navbar = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const navElement = document.getElementById("nav");
+    const navElement = document.getElementById('nav');
     if (navElement) {
-      navElement.classList.remove("visible");
+      navElement.classList.remove('visible');
       setTimeout(() => {
-        navElement.classList.add("visible");
+        navElement.classList.add('visible');
       }, 1);
     }
   }, [location]);
@@ -43,52 +43,27 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] bg-neutral rounded-box shadow mx-10 py-5 w-52 box-shadow: 0px 0px 27px 23px #f7fafc"
             >
               <li>
-              <NavLink to="/" activeClassName="active" className="mx-4 px-4">
-                Home
-              </NavLink>
+                <NavLink to="/" activeClassName="active" className="mx-4 px-4">
+                  Home
+                </NavLink>
               </li>
               <li className="text-xl">
-              <NavLink
-                to="/History"
-                activeClassName="active"
-                className="mx-4 px-4"
-              >
-                History
-              </NavLink>
-              </li>
-              <li>
-                <NavLink to="/Destination" activeClassName="active">
-                  Destination
+                <NavLink
+                  to="/History"
+                  activeClassName="active"
+                  className="mx-4 px-4"
+                >
+                  History
                 </NavLink>
-                <ul className="p-2 z-50">
-                  <li>
-                  <NavLink
-                      to="/Destination/Wisata"
-                      activeClassName="active"
-                      className="mx-4"
-                    >
-                      Wisata
-                    </NavLink>
-                  </li>
-                  <li>
-                  <NavLink
-                      to="/Destination/Kuliner"
-                      activeClassName="active"
-                      className="mx-4 px-4"
-                    >
-                      Kuliner
-                    </NavLink>
-                  </li>
-                </ul>
               </li>
               <li>
-              <NavLink
-                to="/About"
-                activeClassName="active"
-                className="mx-4 px-4"
-              >
-                About Us
-              </NavLink>
+                <NavLink
+                  to="/About"
+                  activeClassName="active"
+                  className="mx-4 px-4"
+                >
+                  About Us
+                </NavLink>
               </li>
               <li></li>
             </ul>
@@ -119,31 +94,6 @@ const Navbar = () => {
               >
                 History
               </NavLink>
-            </li>
-            <li className="text-xl">
-              <details>
-                <summary>Destination</summary>
-                <ul className="p-2 w-44">
-                  <li className="text-xl">
-                    <NavLink
-                      to="/Destination/Wisata"
-                      activeClassName="active"
-                      className="text-center"
-                    >
-                      Wisata
-                    </NavLink>
-                  </li>
-                  <li className="text-xl">
-                    <NavLink
-                      to="/Destination/Kuliner"
-                      activeClassName="active"
-                      className="text-center"
-                    >
-                      Kuliner
-                    </NavLink>
-                  </li>
-                </ul>
-              </details>
             </li>
             <li className="text-xl">
               <NavLink
