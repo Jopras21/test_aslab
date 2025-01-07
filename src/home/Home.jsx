@@ -1,7 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Navbar from '../components/navbar/Navbar';
-import Footer from '../components/footer/Footer';
 import ModelsPage from '../components/CardModels';
 
 const Home = () => {
@@ -29,7 +27,6 @@ const Home = () => {
           src="/assets/video.mp4"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <Navbar />
         <div className="relative h-full flex flex-col items-center justify-center z-10 text-center">
           <motion.h1
             className="text-5xl md:text-7xl font-bold uppercase tracking-wide"
@@ -91,7 +88,7 @@ const Home = () => {
                 transition={{ duration: 0.8 }}
               />
             </div>
-            <div className="flex flex-col justify-center">
+            <div className="flex flex-col w-full justify-center">
               <motion.p
                 className="text-lg text-gray-300 mb-4"
                 initial={{ opacity: 0 }}
@@ -101,8 +98,8 @@ const Home = () => {
                 Porsche is at the forefront of automotive innovation, continually enhancing its vehicles with cutting-edge technologies. From the groundbreaking 800V charging system in the Taycan, enabling ultra-fast charging times, to the advanced Porsche Dynamic Chassis Control Sport (PDCC) in the Panamera, which optimizes handling and stability, Porsche ensures an unparalleled driving experience. In addition, their driver assistance systems, such as Adaptive Cruise Control and Lane Keeping Assist, elevate safety while maintaining the thrill of performance. Porsche’s commitment to electrification is showcased in the Mission R, a fully electric racing car that embodies the future of Porsche’s performance capabilities.
               </motion.p>
               <motion.button
-                whileHover={{ scale: 1.1, backgroundColor: '#1d4ed8' }}
-                className="px-6 py-3 text-lg font-medium bg-blue-600 rounded-full hover:bg-blue-700">
+                whileHover={{ scale: 1.03 }}
+                className="px-3 py-1 w-24 text-lg font-medium bg-[#d61f1f] rounded-lg hover:bg-white hover:text-black ease-in-out">
                 Learn More
               </motion.button>
             </div>
@@ -143,9 +140,6 @@ const Home = () => {
           </div>
         </motion.div>
       </section>
-
-      {/* Footer Section */}
-      <Footer />
     </div>
   );
 };

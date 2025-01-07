@@ -31,7 +31,7 @@ const Navbar = () => {
     <div className="bg-black text-white shadow-md fixed w-full z-50" id="nav">
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
         <NavLink to="/" className="flex items-center">
-          <img src={logo} alt="Logo" className="w-12 h-12 object-cover" />
+          <img src={logo} alt="Logo" className="w-12 h-12 object-cover logo" />
           <span className="ml-3 text-2xl font-bold">Porsche</span>
         </NavLink>
         <ul className="hidden md:flex space-x-6">

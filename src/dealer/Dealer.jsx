@@ -6,7 +6,6 @@ import Footer from '../components/footer/Footer';
 const Dealer = () => {
   return (
     <div className="bg-black text-white min-h-screen relative">
-      {/* Hero Section with Video */}
       <section className="relative h-screen">
         <video
           autoPlay
@@ -141,9 +140,6 @@ const Dealer = () => {
           </motion.button>
         </div>
       </section>
-
-      {/* Footer Section */}
-      <Footer />
     </div>
   );
 };

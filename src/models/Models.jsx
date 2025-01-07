@@ -1,7 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Navbar from '../components/navbar/Navbar';
-import Footer from '../components/footer/Footer';
 
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -59,9 +57,6 @@ const sectionVariants = {
 const Models = () => {
   return (
     <div className="bg-black text-white min-h-screen">
-      <Navbar />
-
-      {/* Models Section */}
       <motion.div
         className="px-8 py-8"
         initial="hidden"
@@ -112,8 +107,6 @@ const Models = () => {
           </motion.section>
         ))}
       </motion.div>
-
-      <Footer />
     </div>
   );
 };

@@ -14,7 +14,7 @@ const About = () => {
           <motion.img
             src="/assets/banner.jpg" 
             alt="Porsche Design"
-            className="absolute inset-0 w-full h-full object-cover opacity-70"
+            className="absolute inset-0 w-full h-full object-cover opacity-50"
             initial={{ opacity: 0, scale: 1.2 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5 }}
@@ -128,11 +128,6 @@ const About = () => {
             Contact Us
           </motion.button>
         </section>
-
-        {/* Footer */}
-        <footer className="bg-gray-900 py-6 text-center text-sm text-gray-500">
-          <p>© {new Date().getFullYear()} Porsche. All rights reserved.</p>
-        </footer>
       </div>
     </>
   );

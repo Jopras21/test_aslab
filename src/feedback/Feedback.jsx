@@ -20,7 +20,7 @@ function FeedBack() {
     const form = event.target;
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
-
+  
     try {
       const response = await fetch('https://sheetdb.io/api/v1/j9oet9nklgy7n', {
         method: 'POST',
@@ -29,26 +29,28 @@ function FeedBack() {
         },
         body: JSON.stringify({
           data: {
-            name: data['data[name]'],
-            rating: data['data[rating]'],
-            feedback: data['data[feedback]'],
+            name: data.name,
+            rating: data.rating,
+            feedback: data.feedback,
           },
         }),
       });
-
+  
+      const result = await response.json();
+      console.log('Response:', result);
+  
       if (response.ok) {
         handleOpen();
       } else {
-        console.error('Submission failed');
+        console.error('Submission failed:', result);
       }
     } catch (error) {
       console.error('Error:', error);
     }
   };
-
+  
   return (
     <>
-    <Navbar />
       <div className="feedback-container">
         <div className="tulisan">
           <h2>Contact Us</h2>
@@ -61,7 +63,7 @@ function FeedBack() {
         </div>
         <div className="form-wrapper">
           <form id="sheetdb-form" onSubmit={handleSubmit}>
-            <div className="formField">
+            <div className="formField w-32">
               <input
                 required
                 type="text"
