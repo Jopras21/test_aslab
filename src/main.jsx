@@ -5,6 +5,7 @@ import './index.css'
 import Home from './home/Home';
 import About from "./about/About";
 import FeedBack from "./feedback/Feedback";
+import Dealer
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -18,6 +19,8 @@ root.render(
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about/*" element={<About/>} />
+          {/* <Route path="/models" element={<Models />} /> */}
+          <Route path="/dealer" element={<Dealer />} />
           <Route path="/Feedback/*" element={<FeedBack />} />
         </Routes>
       </BrowserRouter>

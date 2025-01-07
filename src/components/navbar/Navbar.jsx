@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import logo from '/src/assets/logo.png'
+import logo from '/src/assets/logo.png';
 import Time from './time.jsx';
-import './navbar.css';
 
 const Navbar = () => {
   const location = useLocation();
@@ -18,99 +17,107 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <>
-      <div className="navbar bg-trans" id="nav">
-        <div className="navbar-start">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-15 w-10"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] bg-neutral rounded-box shadow mx-10 py-5 w-52 box-shadow: 0px 0px 27px 23px #f7fafc"
+    <div className="bg-black text-white shadow-md fixed w-full z-50" id="nav">
+      <div className="container mx-auto flex items-center justify-between px-4 py-3">
+        {/* Logo Section */}
+        <NavLink to="/" className="flex items-center">
+          <img src={logo} alt="Logo" className="w-12 h-12 object-cover" />
+          <span className="ml-3 text-2xl font-bold">Porsche</span>
+        </NavLink>
+
+        {/* Desktop Navigation */}
+        <ul className="hidden md:flex space-x-6">
+          <li>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `text-lg transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`
+              }
             >
-              <li>
-                <NavLink to="/" activeClassName="active" className="mx-4 px-4">
-                  Home
-                </NavLink>
-              </li>
-              <li className="text-xl">
-                <NavLink
-                  to="/History"
-                  activeClassName="active"
-                  className="mx-4 px-4"
-                >
-                  History
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/About"
-                  activeClassName="active"
-                  className="mx-4 px-4"
-                >
-                  About Us
-                </NavLink>
-              </li>
-              <li></li>
-            </ul>
-          </div>
-          <NavLink
-            className="btn-ghost hidden lg:flex text-5xl rounded-full"
-            to="/"
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/About"
+              className={({ isActive }) =>
+                `text-lg transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`
+              }
+            >
+              About Us
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/Feedback"
+              className={({ isActive }) =>
+                `text-lg transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`
+              }
+            >
+              Feedback
+            </NavLink>
+          </li>
+        </ul>
+
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <button
+            type="button"
+            className="text-gray-400 hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-600"
+            aria-label="Toggle menu"
           >
-            <img
-              src={logo}
-              alt="logo"
-              className="w-32 h-32 mx-4 object-cover"
-            />
-          </NavLink>
-        </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li className="text-xl">
-              <NavLink to="/" activeClassName="active" className="mx-4 px-4">
-                Home
-              </NavLink>
-            </li>
-            <li className="text-xl">
-              <NavLink
-                to="/History"
-                activeClassName="active"
-                className="mx-4 px-4"
-              >
-                History
-              </NavLink>
-            </li>
-            <li className="text-xl">
-              <NavLink
-                to="/About"
-                activeClassName="active"
-                className="mx-4 px-4"
-              >
-                About Us
-              </NavLink>
-            </li>
-          </ul>
-        </div>
-        <div className="navbar-end hidden flex justify-center lg:flex w-96 m-8">
-          <Time />
+            <svg
+              className="w-6 h-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16m-8 6h16"
+              />
+            </svg>
+          </button>
         </div>
       </div>
-    </>
+
+      {/* Mobile Navigation */}
+      <ul className="md:hidden mt-2 bg-black px-4 py-2 space-y-2">
+        <li>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `block text-lg py-2 transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`
+            }
+          >
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/History"
+            className={({ isActive }) =>
+              `block text-lg py-2 transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`
+            }
+          >
+            History
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/About"
+            className={({ isActive }) =>
+              `block text-lg py-2 transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`
+            }
+          >
+            About Us
+          </NavLink>
+        </li>
+      </ul>
+    </div>
   );
 };
 

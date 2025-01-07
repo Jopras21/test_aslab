@@ -1,42 +1,44 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/navbar/Navbar';
-
+import Footer from '../components/footer/Footer';
 
 const Home = () => {
   return (
-    <div className="bg-black text-white min-h-screen">
-      <Navbar/>
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center">
-        <motion.img
-          src="/path-to-porsche-image.jpg" // Replace with the actual image path
-          alt="Porsche Car"
-          className="absolute inset-0 w-full h-full object-cover opacity-70"
-          initial={{ scale: 1.2, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.5 }}
+    <div className="bg-black text-white min-h-screen relative">
+      {/* Hero Section with Video */}
+      <section className="relative h-screen">
+        <video
+          autoPlay
+          loop
+          muted
+          className="absolute inset-0 w-full h-full object-cover"
+          src="/src/assets/video.mp4"
         />
-        <div className="relative z-10 text-center">
-          <motion.h1
-            className="text-5xl md:text-7xl font-bold uppercase tracking-wide"
-            initial={{ y: -100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1 }}>
-            Drive Your Dream
-          </motion.h1>
-          <motion.p
-            className="mt-4 text-xl md:text-2xl text-gray-300"
-            initial={{ y: 100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.3 }}>
-            Experience luxury and performance like never before.
-          </motion.p>
-          <motion.button
-            whileHover={{ scale: 1.1, backgroundColor: '#d61f1f' }}
-            className="mt-8 px-6 py-3 text-lg font-medium bg-red-600 rounded-full hover:bg-red-700">
-            Discover More
-          </motion.button>
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <Navbar />
+        <div className="relative h-full flex items-center justify-center z-10">
+          <div className="text-center">
+            <motion.h1
+              className="text-5xl md:text-7xl font-bold uppercase tracking-wide"
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1 }}>
+              Drive Your Dream
+            </motion.h1>
+            <motion.p
+              className="mt-4 text-xl md:text-2xl text-gray-300"
+              initial={{ y: 100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.3 }}>
+              Experience luxury and performance like never before.
+            </motion.p>
+            <motion.button
+              whileHover={{ scale: 1.1, backgroundColor: '#d61f1f' }}
+              className="mt-8 px-6 py-3 text-lg font-medium bg-red-600 rounded-full hover:bg-red-700">
+              Discover More
+            </motion.button>
+          </div>
         </div>
       </section>
 
@@ -70,10 +72,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 py-6 text-center text-sm text-gray-500">
-        <p>© {new Date().getFullYear()} Porsche. All rights reserved.</p>
-      </footer>
+      {/* Footer Section */}
+      <Footer />
     </div>
   );
 };
