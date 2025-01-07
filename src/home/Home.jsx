@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/navbar/Navbar';
 import Footer from '../components/footer/Footer';
-import Card from '../components/Card';
+import ModelsPage from '../components/CardModels';
 
 const Home = () => {
   const containerVariants = {
@@ -66,7 +66,7 @@ const Home = () => {
           <h2 className="text-4xl font-semibold text-center mb-8 uppercase tracking-wider">
             Featured Models
           </h2>
-          <Card />
+          <ModelsPage />
         </motion.div>
       </section>
 
@@ -79,13 +79,13 @@ const Home = () => {
           variants={containerVariants}
         >
           <h2 className="text-4xl font-semibold text-center mb-8 uppercase tracking-wider">
-            Cutting-Edge Technology
+            Our Newest Technology
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <motion.img
-                src="/path-to-tech-image.jpg"
-                alt="Technology"
+                src="/src/assets/tech.jpg" // Replace with actual image URL
+                alt="Porsche Technology"
                 className="w-full h-auto rounded-lg shadow-lg"
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
@@ -99,7 +99,7 @@ const Home = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
               >
-                Porsche redefines innovation with cutting-edge technology, featuring advanced driver assistance systems, immersive infotainment, and unmatched engineering precision.
+                Porsche is at the forefront of automotive innovation, continually enhancing its vehicles with cutting-edge technologies. From the groundbreaking 800V charging system in the Taycan, enabling ultra-fast charging times, to the advanced Porsche Dynamic Chassis Control Sport (PDCC) in the Panamera, which optimizes handling and stability, Porsche ensures an unparalleled driving experience. In addition, their driver assistance systems, such as Adaptive Cruise Control and Lane Keeping Assist, elevate safety while maintaining the thrill of performance. Porsche’s commitment to electrification is showcased in the Mission R, a fully electric racing car that embodies the future of Porsche’s performance capabilities.
               </motion.p>
               <motion.button
                 whileHover={{ scale: 1.1, backgroundColor: '#1d4ed8' }}

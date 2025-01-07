@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import logo from '/src/assets/logo.png';
-import Time from './time.jsx';
 
 const Navbar = () => {
   const location = useLocation();
@@ -16,7 +15,6 @@ const Navbar = () => {
         navElement.classList.add('visible');
       }, 1);
     }
-    // Close dropdown and mobile menu when route changes
     setIsDropdownOpen(false);
     setIsMobileMenuOpen(false);
   }, [location]);
@@ -32,20 +30,15 @@ const Navbar = () => {
   return (
     <div className="bg-black text-white shadow-md fixed w-full z-50" id="nav">
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
-        {/* Logo Section */}
         <NavLink to="/" className="flex items-center">
           <img src={logo} alt="Logo" className="w-12 h-12 object-cover" />
           <span className="ml-3 text-2xl font-bold">Porsche</span>
         </NavLink>
-
-        {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-6">
           <li>
             <NavLink
               to="/"
-              className={({ isActive }) =>
-                `text-lg transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`
-              }
+              className={({ isActive }) => `text-lg transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`}
             >
               Home
             </NavLink>
@@ -53,15 +46,11 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/About"
-              className={({ isActive }) =>
-                `text-lg transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`
-              }
+              className={({ isActive }) => `text-lg transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`}
             >
               About Us
             </NavLink>
           </li>
-
-          {/* Dropdown Menu for Models */}
           <li className="relative">
             <button
               onClick={toggleDropdown}
@@ -73,15 +62,7 @@ const Navbar = () => {
               <ul className="absolute left-0 mt-2 bg-black text-white w-48 shadow-lg rounded-md">
                 <li>
                   <NavLink
-                    to="/model-718"
-                    className="block px-4 py-2 text-lg transition hover:bg-gray-700"
-                  >
-                    Porsche 718
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/model-911"
+                    to="/models#911"
                     className="block px-4 py-2 text-lg transition hover:bg-gray-700"
                   >
                     Porsche 911
@@ -89,30 +70,43 @@ const Navbar = () => {
                 </li>
                 <li>
                   <NavLink
-                    to="/model-panamera"
+                    to="/models#taycan"
                     className="block px-4 py-2 text-lg transition hover:bg-gray-700"
                   >
-                    Porsche Panamera
+                    Porsche Taycan
                   </NavLink>
                 </li>
                 <li>
                   <NavLink
-                    to="/model-macan"
+                    to="/models#macan"
                     className="block px-4 py-2 text-lg transition hover:bg-gray-700"
                   >
                     Porsche Macan
                   </NavLink>
                 </li>
+                <li>
+                  <NavLink
+                    to="/models#cayenne"
+                    className="block px-4 py-2 text-lg transition hover:bg-gray-700"
+                  >
+                    Porsche Cayenne
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/models#panamera"
+                    className="block px-4 py-2 text-lg transition hover:bg-gray-700"
+                  >
+                    Porsche Panamera
+                  </NavLink>
+                </li>
               </ul>
             )}
           </li>
-
           <li>
             <NavLink
               to="/Dealer"
-              className={({ isActive }) =>
-                `text-lg transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`
-              }
+              className={({ isActive }) => `text-lg transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`}
             >
               Dealer
             </NavLink>
@@ -120,16 +114,12 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/Feedback"
-              className={({ isActive }) =>
-                `text-lg transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`
-              }
+              className={({ isActive }) => `text-lg transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`}
             >
               Feedback
             </NavLink>
           </li>
         </ul>
-
-        {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button
             onClick={toggleMobileMenu}
@@ -154,16 +144,12 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-
-      {/* Mobile Navigation */}
       {isMobileMenuOpen && (
         <ul className="md:hidden bg-black px-4 py-2 space-y-2">
           <li>
             <NavLink
               to="/"
-              className={({ isActive }) =>
-                `block text-lg py-2 transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`
-              }
+              className={({ isActive }) => `block text-lg py-2 transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`}
             >
               Home
             </NavLink>
@@ -171,9 +157,7 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/About"
-              className={({ isActive }) =>
-                `block text-lg py-2 transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`
-              }
+              className={({ isActive }) => `block text-lg py-2 transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`}
             >
               About Us
             </NavLink>
@@ -189,15 +173,7 @@ const Navbar = () => {
               <ul className="ml-4">
                 <li>
                   <NavLink
-                    to="/model-718"
-                    className="block py-2 text-lg transition hover:text-gray-400"
-                  >
-                    Porsche 718
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/model-911"
+                    to="/models#911"
                     className="block py-2 text-lg transition hover:text-gray-400"
                   >
                     Porsche 911
@@ -205,18 +181,34 @@ const Navbar = () => {
                 </li>
                 <li>
                   <NavLink
-                    to="/model-panamera"
+                    to="/models#taycan"
                     className="block py-2 text-lg transition hover:text-gray-400"
                   >
-                    Porsche Panamera
+                    Porsche Taycan
                   </NavLink>
                 </li>
                 <li>
                   <NavLink
-                    to="/model-macan"
+                    to="/models#macan"
                     className="block py-2 text-lg transition hover:text-gray-400"
                   >
                     Porsche Macan
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/models#cayenne"
+                    className="block py-2 text-lg transition hover:text-gray-400"
+                  >
+                    Porsche Cayenne
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/models#panamera"
+                    className="block py-2 text-lg transition hover:text-gray-400"
+                  >
+                    Porsche Panamera
                   </NavLink>
                 </li>
               </ul>
@@ -225,9 +217,7 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/Dealer"
-              className={({ isActive }) =>
-                `block text-lg py-2 transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`
-              }
+              className={({ isActive }) => `block text-lg py-2 transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`}
             >
               Dealer
             </NavLink>
@@ -235,9 +225,7 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/Feedback"
-              className={({ isActive }) =>
-                `block text-lg py-2 transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`
-              }
+              className={({ isActive }) => `block text-lg py-2 transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`}
             >
               Feedback
             </NavLink>

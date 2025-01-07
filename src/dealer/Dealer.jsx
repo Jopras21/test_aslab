@@ -49,18 +49,16 @@ const Dealer = () => {
         >
           Dealer Locations
         </motion.h2>
-        <div className="relative w-full h-96">
+        <div className="relative w-full h-full rounded-lg overflow-hidden shadow-lg">
           <div className="mapouter">
             <div className="gmap_canvas">
               <iframe
-                className="gmap_iframe"
-                width="100%"
-                height="70%"
+                className="gmap_iframe w-full h-[500px] border-0"
                 frameBorder="0"
                 scrolling="no"
                 marginHeight="0"
                 marginWidth="0"
-                src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=indonesia&amp;t=k&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                src="https://maps.google.com/maps?width=600&amp;height=800&amp;hl=en&amp;q=indonesia&amp;t=k&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               ></iframe>
             </div>
           </div>
