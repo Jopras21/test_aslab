@@ -38,7 +38,9 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/"
-              className={({ isActive }) => `text-lg transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`}
+              className={({ isActive }) =>
+                `text-lg transition ease-in-out hover:text-gray-400 hover:[text-shadow:_0_1px_8px_rgb(255_255_102/_1)] ${isActive ? 'text-gray-400' : ''}`
+              }
             >
               Home
             </NavLink>
@@ -46,7 +48,9 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/About"
-              className={({ isActive }) => `text-lg transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`}
+              className={({ isActive }) =>
+                `text-lg transition ease-in-out hover:text-gray-400 hover:[text-shadow:_0_1px_8px_rgb(255_255_102/_1)] ${isActive ? 'text-gray-400' : ''}`
+              }
             >
               About Us
             </NavLink>
@@ -54,7 +58,7 @@ const Navbar = () => {
           <li className="relative">
             <button
               onClick={toggleDropdown}
-              className="text-lg transition hover:text-gray-400 focus:outline-none"
+              className="text-lg transition ease-in-out hover:text-gray-400 hover:[text-shadow:_0_1px_8px_rgb(255_255_102/_1)] focus:outline-none"
             >
               Models
             </button>
@@ -62,8 +66,16 @@ const Navbar = () => {
               <ul className="absolute left-0 mt-2 bg-black text-white w-48 shadow-lg rounded-md">
                 <li>
                   <NavLink
+                    to="/models#718"
+                    className="block px-4 py-2 text-lg transiti ease-in-outon hover:bg-gray-700 hover:[text-shadow:_0_1px_5px_ ease-in8outrgb(255_255_102/_1)] hover:[text-shadow:_0_1px_8px_rgb(255_255_102/_1)]"
+                  >
+                    Porsche 718
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
                     to="/models#911"
-                    className="block px-4 py-2 text-lg transition hover:bg-gray-700"
+                    className="block px-4 py-2 text-lg transiti ease-in-outon hover:bg-gray-700 hover:[text-shadow:_0_1px_8px_rgb(255_255_102/_1)]"
                   >
                     Porsche 911
                   </NavLink>
@@ -71,7 +83,7 @@ const Navbar = () => {
                 <li>
                   <NavLink
                     to="/models#taycan"
-                    className="block px-4 py-2 text-lg transition hover:bg-gray-700"
+                    className="block px-4 py-2 text-lg transiti ease-in-outon hover:bg-gray-700 hover:[text-shadow:_0_1px_8px_rgb(255_255_102/_1)]"
                   >
                     Porsche Taycan
                   </NavLink>
@@ -79,23 +91,15 @@ const Navbar = () => {
                 <li>
                   <NavLink
                     to="/models#macan"
-                    className="block px-4 py-2 text-lg transition hover:bg-gray-700"
+                    className="block px-4 py-2 text-lg transiti ease-in-outon hover:bg-gray-700 hover:[text-shadow:_0_1px_8px_rgb(255_255_102/_1)]"
                   >
                     Porsche Macan
                   </NavLink>
                 </li>
                 <li>
                   <NavLink
-                    to="/models#cayenne"
-                    className="block px-4 py-2 text-lg transition hover:bg-gray-700"
-                  >
-                    Porsche Cayenne
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
                     to="/models#panamera"
-                    className="block px-4 py-2 text-lg transition hover:bg-gray-700"
+                    className="block px-4 py-2 text-lg transiti ease-in-outon hover:bg-gray-700 hover:[text-shadow:_0_1px_8px_rgb(255_255_102/_1)]"
                   >
                     Porsche Panamera
                   </NavLink>
@@ -106,7 +110,9 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/Dealer"
-              className={({ isActive }) => `text-lg transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`}
+              className={({ isActive }) =>
+                `text-lg transition ease-in-out hover:text-gray-400 hover:[text-shadow:_0_1px_8px_rgb(255_255_102/_1)] ${isActive ? 'text-gray-400' : ''}`
+              }
             >
               Dealer
             </NavLink>
@@ -114,7 +120,9 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/Feedback"
-              className={({ isActive }) => `text-lg transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`}
+              className={({ isActive }) =>
+                `text-lg transition ease-in-out hover:text-gray-400 hover:[text-shadow:_0_1px_8px_rgb(255_255_102/_1)] ${isActive ? 'text-gray-400' : ''}`
+              }
             >
               Feedback
             </NavLink>
@@ -149,7 +157,9 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/"
-              className={({ isActive }) => `block text-lg py-2 transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`}
+              className={({ isActive }) =>
+                `block text-lg py-2 transition ease-in-out hover:text-gray-400 hover:[text-shadow:_0_1px_8px_rgb(255_255_102/_1)] ${isActive ? 'text-gray-400' : ''}`
+              }
             >
               Home
             </NavLink>
@@ -157,7 +167,9 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/About"
-              className={({ isActive }) => `block text-lg py-2 transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`}
+              className={({ isActive }) =>
+                `block text-lg py-2 transition ease-in-out hover:text-gray-400 hover:[text-shadow:_0_1px_8px_rgb(255_255_102/_1)] ${isActive ? 'text-gray-400' : ''}`
+              }
             >
               About Us
             </NavLink>
@@ -165,7 +177,7 @@ const Navbar = () => {
           <li>
             <button
               onClick={toggleDropdown}
-              className="block text-lg py-2 text-left w-full transition hover:text-gray-400 focus:outline-none"
+              className="block text-lg py-2 text-left w-full transition ease-in-out hover:text-gray-400 hover:[text-shadow:_0_1px_8px_rgb(255_255_102/_1)] focus:outline-none"
             >
               Models
             </button>
@@ -174,7 +186,7 @@ const Navbar = () => {
                 <li>
                   <NavLink
                     to="/models#911"
-                    className="block py-2 text-lg transition hover:text-gray-400"
+                    className="block py-2 text-lg transition ease-in-out hover:text-gray-400 hover:[text-shadow:_0_1px_8px_rgb(255_255_102/_1)]"
                   >
                     Porsche 911
                   </NavLink>
@@ -182,7 +194,7 @@ const Navbar = () => {
                 <li>
                   <NavLink
                     to="/models#taycan"
-                    className="block py-2 text-lg transition hover:text-gray-400"
+                    className="block py-2 text-lg transition ease-in-out hover:text-gray-400 hover:[text-shadow:_0_1px_8px_rgb(255_255_102/_1)]"
                   >
                     Porsche Taycan
                   </NavLink>
@@ -190,7 +202,7 @@ const Navbar = () => {
                 <li>
                   <NavLink
                     to="/models#macan"
-                    className="block py-2 text-lg transition hover:text-gray-400"
+                    className="block py-2 text-lg transition ease-in-out hover:text-gray-400 hover:[text-shadow:_0_1px_8px_rgb(255_255_102/_1)]"
                   >
                     Porsche Macan
                   </NavLink>
@@ -198,7 +210,7 @@ const Navbar = () => {
                 <li>
                   <NavLink
                     to="/models#cayenne"
-                    className="block py-2 text-lg transition hover:text-gray-400"
+                    className="block py-2 text-lg transition ease-in-out hover:text-gray-400 hover:[text-shadow:_0_1px_8px_rgb(255_255_102/_1)]"
                   >
                     Porsche Cayenne
                   </NavLink>
@@ -206,7 +218,7 @@ const Navbar = () => {
                 <li>
                   <NavLink
                     to="/models#panamera"
-                    className="block py-2 text-lg transition hover:text-gray-400"
+                    className="block py-2 text-lg transition ease-in-out hover:text-gray-400 hover:[text-shadow:_0_1px_8px_rgb(255_255_102/_1)]"
                   >
                     Porsche Panamera
                   </NavLink>
@@ -217,7 +229,9 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/Dealer"
-              className={({ isActive }) => `block text-lg py-2 transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`}
+              className={({ isActive }) =>
+                `block text-lg py-2 transition ease-in-out hover:text-gray-400 hover:[text-shadow:_0_1px_8px_rgb(255_255_102/_1)] ${isActive ? 'text-gray-400' : ''}`
+              }
             >
               Dealer
             </NavLink>
@@ -225,7 +239,9 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/Feedback"
-              className={({ isActive }) => `block text-lg py-2 transition hover:text-gray-400 ${isActive ? 'text-gray-400' : ''}`}
+              className={({ isActive }) =>
+                `block text-lg py-2 transition ease-in-out hover:text-gray-400 hover:[text-shadow:_0_1px_8px_rgb(255_255_102/_1)] ${isActive ? 'text-gray-400' : ''}`
+              }
             >
               Feedback
             </NavLink>
